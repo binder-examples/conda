@@ -3,8 +3,10 @@ channels:
   - defaults
   - conda-forge
 dependencies:
+  - python
   - numpy
   - toolz
+  - psutils
   - matplotlib
   - dill
   - pandas
