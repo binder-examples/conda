@@ -1,10 +1,8 @@
 name: example-environment
-
 channels:
+  - defaults
   - conda-forge
-
 dependencies:
-  - python3
   - numpy
   - toolz
   - matplotlib
