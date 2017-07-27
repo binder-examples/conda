@@ -1,12 +1,14 @@
 name: example-environment
-
+channels:
+  - conda-forge
 dependencies:
-  - python=3.6
+  - python
   - numpy
+  - psutil
   - toolz
   - matplotlib
   - dill
   - pandas
   - partd
-  - pip:
-    - git+https://github.com/blaze/dask.git#egg=dask[complete]
+  - bokeh
+  - dask
