@@ -2,11 +2,11 @@
 
 A Binder-compatible repo with an `environment.yml` file.
 
-[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/binder-examples/conda-environment/master)
+[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/binder-examples/conda_environment/v1.0?filepath=index.ipynb)
 
 Access this Binder at the following URL:
 
-http://beta.mybinder.org/v2/gh/binder-examples/conda-environment/master
+http://beta.mybinder.org/v2/gh/binder-examples/conda_environment/v1.0?filepath=index.ipynb
 
 # Notes
 The `environment.yml` file should list all Python libraries on which your notebooks
