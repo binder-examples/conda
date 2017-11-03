@@ -8,7 +8,7 @@ Access this Binder at the following URL:
 
 http://beta.mybinder.org/v2/gh/binder-examples/conda_environment/v1.0?filepath=index.ipynb
 
-# Notes
+## Notes
 The `environment.yml` file should list all Python libraries on which your notebooks
 depend, specified as though they were created using the following `conda` commands:
 
