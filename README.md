@@ -6,7 +6,7 @@ A Binder-compatible repo with an `environment.yml` file.
 
 Access this Binder at the following URL:
 
-binder<a href="https://mybinder.org/v2/gh/3keepmovingforward3/conda/test" target="blank">binder</a>
+https://mybinder.org/v2/gh/3keepmovingforward3/conda/test
 
 ## Notes
 The `environment.yml` file should list all Python libraries on which your notebooks
