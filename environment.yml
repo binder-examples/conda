@@ -19,7 +19,6 @@ dependencies:
   - yaml
   - xz
   - xlwt
-  - xlwings
   - wheel
   - tornado
   - sqlite
@@ -27,7 +26,6 @@ dependencies:
   - sip
   - tk
   - isort
-  - ipytkernel
   - ipython
   - html5lib
   - jupyter
