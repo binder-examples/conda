@@ -3,11 +3,8 @@ channels:
   - conda-forge
 dependencies:
   - numpy
-  - psutil
-  - toolz
   - matplotlib
   - dill
-  - pandas
   - partd
   - scipy
   - zstd
@@ -20,8 +17,5 @@ dependencies:
   - sip
   - tk
   - isort
-  - ipython
   - html5lib
   - jupyter
-  - octave_kernel
-  - python=3.7
