@@ -32,3 +32,4 @@ dependencies:
   - html5lib
   - jupyter
   - libssh2
+  - octave_kernel
