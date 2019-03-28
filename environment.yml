@@ -5,3 +5,5 @@ dependencies:
   - numpy
   - matplotlib
   - scipy
+  - pandas
+  - octave_kernel
