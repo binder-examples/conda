@@ -9,6 +9,3 @@ dependencies:
   - octave_kernel
   - pyjanitor
   - node
-  - occi
-  - occidentalis
-  
