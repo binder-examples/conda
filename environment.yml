@@ -4,18 +4,10 @@ channels:
 dependencies:
   - numpy
   - matplotlib
-  - dill
-  - partd
   - scipy
   - zstd
   - zlib
-  - zict
-  - zeromq
   - yaml
   - sqlite
   - sympy
-  - sip
-  - tk
-  - isort
-  - html5lib
   - jupyter
