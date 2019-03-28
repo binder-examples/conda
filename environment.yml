@@ -5,9 +5,3 @@ dependencies:
   - numpy
   - matplotlib
   - scipy
-  - zstd
-  - zlib
-  - yaml
-  - sqlite
-  - sympy
-  - jupyter
