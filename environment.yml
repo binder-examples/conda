@@ -33,3 +33,4 @@ dependencies:
   - jupyter
   - libssh2
   - octave_kernel
+  - python=3.7
