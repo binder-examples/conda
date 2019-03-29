@@ -1,1 +1,1 @@
-
+conda update -n base conda
