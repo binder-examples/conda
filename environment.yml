@@ -9,5 +9,8 @@ dependencies:
   - octave_kernel
   - pyjanitor
   - node
+  - boto
+  - django
+  - requests
   - pip:
     - bash_kernel
