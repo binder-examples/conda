@@ -9,3 +9,4 @@ dependencies:
   - octave_kernel
   - pyjanitor
   - node
+  - bash_kernel
