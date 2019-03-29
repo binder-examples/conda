@@ -8,3 +8,4 @@ dependencies:
   - pandas
   - octave_kernel
   - pyjanitor
+  - node
