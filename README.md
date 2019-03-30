@@ -1,12 +1,11 @@
 # Conda environment with environment.yml
-
+Master
 [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/3keepmovingforward3/conda/master?urlpath=lab)
-
+Test
+[![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/3keepmovingforward3/conda/test?urlpath=lab)
 A Binder-compatible repo with an `environment.yml` file.
 
 Access this Binder at the following URL:
-
-
 
 ## Notes
 The `environment.yml` file should list all Python libraries on which your notebooks
