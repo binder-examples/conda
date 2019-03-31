@@ -1,6 +1,7 @@
 name: base-environment
 channels:
   - conda-forge
+  - auto
 dependencies:
   - numpy
   - matplotlib
