@@ -1,7 +1,6 @@
 name: base-environment
 channels:
   - conda-forge
-  - auto
 dependencies:
   - numpy
   - matplotlib
@@ -15,8 +14,8 @@ dependencies:
   - requests
   - nodejs=9
   - jupyterlab>=0.33
-  - prettyprint
   - pip:
     - bash_kernel
     - jupyterlab_latex
+    - prettyprint
 
