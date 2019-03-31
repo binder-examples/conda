@@ -14,6 +14,7 @@ dependencies:
   - requests
   - nodejs=9
   - jupyterlab>=0.33
+  - prettyprint
   - pip:
     - bash_kernel
     - jupyterlab_latex
