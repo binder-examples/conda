@@ -1,7 +1,9 @@
 name: base-environment
 channels:
+  - defaults
   - conda-forge
 dependencies:
+  - python=3.6
   - numpy
   - matplotlib
   - scipy
@@ -14,8 +16,14 @@ dependencies:
   - requests
   - nodejs=9
   - jupyterlab>=0.33
+  - notebook
+  - vega
+  - seaborn
+  - altair
+  - vega_datasets
+  - cartopy
+  - geopandas
   - pip:
-    - bash_kernel
     - jupyterlab_latex
     - prettyprint
     - mechanize
