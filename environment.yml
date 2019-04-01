@@ -23,6 +23,7 @@ dependencies:
   - vega_datasets
   - cartopy
   - geopandas
+  - rise
   - pip:
     - jupyterlab_latex
     - prettyprint
