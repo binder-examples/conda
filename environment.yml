@@ -19,4 +19,5 @@ dependencies:
     - jupyterlab_latex
     - prettyprint
     - mechanize
+    - mplleaflet
 
