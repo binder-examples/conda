@@ -24,6 +24,7 @@ dependencies:
   - cartopy
   - geopandas
   - rise
+  - bokeh
   - pip:
     - jupyterlab_latex
     - prettyprint
