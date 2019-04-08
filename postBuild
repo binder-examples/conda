@@ -7,6 +7,7 @@ test -e test.png && rm test.png
 
 go get github.com/yunabe/lgo/cmd/lgo && go get -d github.com/yunabe/lgo/cmd/lgo-internal
 lgo install
+python $(go env GOPATH)/src/github.com/yunabe/lgo/bin/install_kernel
 
 jupyter labextension install @jupyterlab/latex
 jupyter labextension install @yunabe/lgo_extension
