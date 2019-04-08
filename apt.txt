@@ -6,3 +6,4 @@ texlive-fonts-recommended
 dvipng
 ghostscript
 libzmq3-dev
+pkg-config
