@@ -5,6 +5,9 @@ python -c "import matplotlib as mpl; mpl.use('Agg'); import pylab as plt; fig, a
 	
 test -e test.png && rm test.png
 
+go get github.com/yunabe/lgo/cmd/lgo && go get -d github.com/yunabe/lgo/cmd/lgo-internal
+lgo install
+
 jupyter labextension install @jupyterlab/latex
 jupyter labextension install @yunabe/lgo_extension
 jupyter lab build
