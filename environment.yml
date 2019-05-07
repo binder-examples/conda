@@ -31,4 +31,3 @@ dependencies:
     - jupyterlab_latex
     - prettyprint
     - mplleaflet
-
