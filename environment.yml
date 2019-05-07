@@ -5,6 +5,7 @@ channels:
   - damianavila82
 dependencies:
   - python=3.7
+  - pip
   - numpy
   - matplotlib
   - scipy
