@@ -4,7 +4,7 @@ channels:
   - conda-forge
   - damianavila82
 dependencies:
-  - python=3.6
+  - python=3.7
   - numpy
   - matplotlib
   - scipy
@@ -22,7 +22,6 @@ dependencies:
   - seaborn
   - altair
   - vega_datasets
-  - cartopy
   - geopandas
   - rise
   - bokeh
@@ -30,6 +29,5 @@ dependencies:
   - pip:
     - jupyterlab_latex
     - prettyprint
-    - mechanize
     - mplleaflet
 
