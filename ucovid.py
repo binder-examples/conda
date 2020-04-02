@@ -16,7 +16,7 @@ font = {'family' : 'normal',
         'size'   : 22}
 
 plt.rc('font', **font)
-plt.rc('text', usetex=True)
+#plt.rc('text', usetex=True)
 plt.rc('xtick',labelsize=22)
 plt.rc('ytick',labelsize=22)
 
@@ -70,6 +70,14 @@ f=tauxcontacper(0.25,p,0.8,T)
 dtt=np.linspace(-2*T,3*T,400)
 g=periodise(f,T)
 #plt.plot(dtt,[g(s) for s in dtt])
+
+def lamat(betaA,betaS,piS,gammaA,gammaS):
+    return np.array([[piS*betaS-gammaS,piS*betaS],[(1-piS)*betaA,(1-piS)*betaA-gammaA]])
+
+def lesabcissesspec(betaA,betaS,piS,gammaA,gammaS,cbeta):
+    azero=lamat(betaA,betaS,piS,gammaA,gammaS)
+    azcbeta=lamat(betaA*(1-cbeta),betaS*(1-cbeta),piS,gammaA,gammaS)
+    return(spectralabc(azero),spectralabc(azcbeta))
 
 def matcroissance(betaa,betai,pii,gammai,gammaa):
     def a(t):
@@ -161,18 +169,18 @@ def siraipcbeta(T=1,nbpts=50):
 
 
 #ecrivns une fonction que nous rendrons interactive
-def siraicov(betaamax=0.25,
-             betaimax=0.25,
-             pii=0.15,gammaa=0.1,gammai=0.05,T=7,nbpts=50):
+def siraicov(betaA=0.25,
+             betaS=0.25,
+             piS=0.15,gammaA=0.1,gammaS=0.05,T=7,nbpts=50):
     
     ctt=np.linspace(0,1,nbpts)
     l=[]
     for cbeta in ctt:
         def lrsp(p):
-            betaa=tauxcontacper(betaamax,p,cbeta,T)
-            betai=tauxcontacper(betaimax,p,cbeta,T)
-            a=matcroissance(betaa,betai,pii,gammai,gammaa)
-            phiT=np.dot(expm(a(0.01*T)*p*T),expm(a(0.99*T)*(1-p)*T))
+            fbetaA=tauxcontacper(betaA,p,cbeta,T)
+            fbetaS=tauxcontacper(betaS,p,cbeta,T)
+            a=matcroissance(fbetaA,fbetaS,piS,gammaS,gammaA)
+            phiT=np.dot(expm(a(0.99*T)*(1-p)*T),expm(a(0.01*T)*p*T))
             return((np.log(spectralrad(phiT)))/T)
         if (lrsp(0)*lrsp(1)<0):
             p=brentq(lrsp,0,1)
@@ -181,8 +189,85 @@ def siraicov(betaamax=0.25,
     
     f,ax=plt.subplots(1,1)
     axc=ax
-    axc.set_xlabel(r"cbeta : efficiency of social distancing")
+    axc.set_xlabel(r"$c_\beta$ : efficiency of social distancing")
     axc.set_ylabel("p : proportion of freedom (no  social distancing)")
     axc.plot(utt,[ualon(i,rzero) for i in utt])
     axc.plot(l[:,0],l[:,1])
+
+
+
+def bsiraicov(betaA=0.25,
+             betaS=0.25,
+             piS=0.15,gammaA=0.1,gammaS=0.05,T=7,nbpts=50):
+    
+    ctt=np.linspace(0,1,nbpts)
+    l=[]
+    la=[]
+    for cbeta in ctt:
+        def lrsp(p):
+            fbetaA=tauxcontacper(betaA,p,cbeta,T)
+            fbetaS=tauxcontacper(betaS,p,cbeta,T)
+            a=matcroissance(fbetaA,fbetaS,piS,gammaS,gammaA)
+            phiT=np.dot(expm(a(0.99*T)*(1-p)*T),expm(a(0.01*T)*p*T))
+            return((np.log(spectralrad(phiT)))/T)
+        if (lrsp(0)*lrsp(1)<0):
+            p=brentq(lrsp,0,1)
+            l.append([cbeta,p])
+        saz,sazcb=lesabcissesspec(betaA,betaS,piS,gammaA,gammaS,cbeta)
+        #print("saz,sazcb",saz,sazcb)
+        if (sazcb<0.0):
+            #print("\t :saz,sazcb",saz,sazcb)
+            la.append([cbeta,sazcb/(sazcb-saz)])
+    l=np.array(l)
+    la=np.array(la)
+    #print("l-la",l-la)
+    f,ax=plt.subplots(1,1)
+    axc=ax
+    axc.set_xlabel(r"$c_\beta$ : efficiency of social distancing")
+    axc.set_ylabel("p : proportion of freedom (no  social distancing)")
+    axc.plot(utt,[ualon(i,rzero) for i in utt],label="Ualon")
+    axc.plot(l[:,0],l[:,1],label="true critical line")
+    axc.plot(la[:,0],la[:,1],label="approximate critical line")
+    axc.legend(loc='upper left')
+    axc.set_title("T="+str(T))
+
+
+#jeudi 2 avril 2020 : il faut que je verifie mon theoreme sur les abcisses spectrales
+A=lamat(betaamax,betaimax,pii,gammaa,gammai)
+B=lamat(betaamax*(1-cbeta),betaimax*(1-cbeta),pii,gammaa,gammai)
+[np.log(spectralrad(np.dot(expm(B*(1-p)*T),expm(A*p*T))))/T for T in 10*np.arange(1,40)]
+spectralabc(A)*p + spectralabc(B)*(1-p)#pas la meme quantite
+spectralabc(A)-np.log(spectralrad(expm(A)))#la cela coincide
+#il faut prendre T del 'orde de 400 pour que cela se rapproche!!!                     
+
+
+#on trace maintenant avec deux périodes pour en voir l'influence
+def bipersiraicov(betaA=0.25,
+             betaS=0.25,
+                  piS=0.15,gammaA=0.1,gammaS=0.05,T1=7,T2=100,nbpts=50):
+    
+    ctt=np.linspace(0,1,nbpts)
+    l=[[],[]]
+    for i, T in enumerate((T1,T2)):
+        for cbeta in ctt:
+            def lrsp(p):
+                fbetaA=tauxcontacper(betaA,p,cbeta,T)
+                fbetaS=tauxcontacper(betaS,p,cbeta,T)
+                a=matcroissance(fbetaA,fbetaS,piS,gammaS,gammaA)
+                phiT=np.dot(expm(a(0.99*T)*(1-p)*T),expm(a(0.01*T)*p*T))
+                return((np.log(spectralrad(phiT)))/T)
+            if (lrsp(0)*lrsp(1)<0):
+                p=brentq(lrsp,0,1)
+                l[i].append([cbeta,p])
+    l=np.array(l)
+    
+    f,ax=plt.subplots(1,1)
+    axc=ax
+    axc.set_xlabel(r"$c_\beta$ : efficiency of social distancing")
+    axc.set_ylabel("p : proportion of freedom (no  social distancing)")
+    axc.plot(utt,[ualon(i,rzero) for i in utt],label="U Alon")
+    axc.plot(l[0][:,0],l[0][:,1],label="T="+str(T1))
+    axc.plot(l[1][:,0],l[1][:,1],label="T="+str(T2))
+    axc.legend(loc='upper left')
+    axc.set_title(r"critical curves : $p(c_\beta)$")
 
