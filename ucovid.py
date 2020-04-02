@@ -181,7 +181,7 @@ def siraicov(betaamax=0.25,
     
     f,ax=plt.subplots(1,1)
     axc=ax
-    axc.set_xlabel(r"$c_\beta$ : efficiency of social distancing")
+    axc.set_xlabel(r"cbeta : efficiency of social distancing")
     axc.set_ylabel("p : proportion of freedom (no  social distancing)")
     axc.plot(utt,[ualon(i,rzero) for i in utt])
     axc.plot(l[:,0],l[:,1])
