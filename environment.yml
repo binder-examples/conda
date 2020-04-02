@@ -13,4 +13,4 @@ dependencies:
   - dask
   - scipy
   - seaborn
-  
+  - appmode
