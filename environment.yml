@@ -11,3 +11,6 @@ dependencies:
   - partd
   - bokeh
   - dask
+  - scipy
+  - seaborn
+  
