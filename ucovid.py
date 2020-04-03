@@ -16,7 +16,7 @@ font = {'family' : 'normal',
         'size'   : 22}
 
 plt.rc('font', **font)
-#plt.rc('text', usetex=True)
+#plt.rc('text', usetex=True) #rend plus rapide les sorties graphiques
 plt.rc('xtick',labelsize=22)
 plt.rc('ytick',labelsize=22)
 
@@ -114,8 +114,8 @@ np.log(spectralrad(phiT)),p*spectralabc(b(1))+(1-p)*spectralabc(b(5))
 sns.set(style="whitegrid")
 def ualon(cbeta,rzero=2.5):
     return( (1-rzero*(1-cbeta))/(rzero*cbeta))
-rzero=2.5
-utt=np.linspace(1-1/rzero,1,100)
+#rzero=2.5
+#utt=np.linspace(1-1/rzero,1,100)
 #plt.xlabel(r"$c_\beta$ : efficiency of social distancing")
 #plt.ylabel("p : proportion of freedom (no  social distancing)")
 #plt.plot(utt,[ualon(i,rzero) for i in utt])
@@ -245,7 +245,8 @@ spectralabc(A)-np.log(spectralrad(expm(A)))#la cela coincide
 def bipersiraicov(betaA=0.25,
              betaS=0.25,
                   piS=0.15,gammaA=0.1,gammaS=0.05,T1=7,T2=100,nbpts=50):
-    
+    #modif du 3 avril : il faut calculer le rzero pour ualon
+    rzero=(piS*betaS/gammaS)+ ((1-piS)*betaA/gammaA)
     ctt=np.linspace(0,1,nbpts)
     l=[[],[]]
     for i, T in enumerate((T1,T2)):
@@ -260,12 +261,12 @@ def bipersiraicov(betaA=0.25,
                 p=brentq(lrsp,0,1)
                 l[i].append([cbeta,p])
     l=np.array(l)
-    
+    utt=np.linspace(1-1/rzero,1,20)#pour ualon
     f,ax=plt.subplots(1,1)
     axc=ax
     axc.set_xlabel(r"$c_\beta$ : efficiency of social distancing")
     axc.set_ylabel("p : proportion of freedom (no  social distancing)")
-    axc.plot(utt,[ualon(i,rzero) for i in utt],label="U Alon")
+    axc.plot(utt,[ualon(i,rzero) for i in utt],'bo',label="U Alon")
     axc.plot(l[0][:,0],l[0][:,1],label="T="+str(T1))
     axc.plot(l[1][:,0],l[1][:,1],label="T="+str(T2))
     axc.legend(loc='upper left')
