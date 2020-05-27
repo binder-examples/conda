@@ -15,5 +15,5 @@ dependencies:
   - seaborn
   - appmode
   - jupyterlab>=0.35
-   - pip:
+  - pip:
       - jupyterlab_latex
