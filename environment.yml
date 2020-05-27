@@ -14,6 +14,3 @@ dependencies:
   - scipy
   - seaborn
   - appmode
-  - jupyterlab>=0.35
-  - pip:
-      - jupyterlab_latex
