@@ -115,7 +115,7 @@ Si le processus s'éteint avant on a moins de N points"""
             break #le processus s'est éteint
     return(z)
 
-def nsestimdenszchi(lzero,muzero,T,N,coeff=1.0,estimnoyau=False):
+def nsestimdenszchi(lzero,muzero,T,N,coeff=1.0,estimnoyau=False,image=False):
     r""" coeff est l'intensité de la modulation sinusoidale"""
     nbpts=100
     def lam(t):
@@ -141,10 +141,13 @@ def nsestimdenszchi(lzero,muzero,T,N,coeff=1.0,estimnoyau=False):
             if estimnoyau:
                 plt.plot(tt,k(tt),label="echantillon")
             #plt.plot(tt,[(1+np.cos((2*pi*t)/T))/T for t in tt],color="red")
-            plt.plot(tt,lamepa,color="green",label="stable composition density $\pi$ ")
-            plt.plot(tt,tlam,color="red",label="$\lambda(t)$")
+            #plt.plot(tt,lamepa,color="green",label="stable composition density $\lambda(t) e^{A(t)}$ ")
+            plt.plot(tt,lamepa,color="green",label="stable composition density")
+            #plt.plot(tt,tlam,color="red",label="$\lambda(t)$")
+            plt.plot(tt,tlam,color="red",label="birth rate")
             plt.legend()
-            #plt.savefig("stablecompolbdsinusoid.pdf",bbox_inches='tight',dpi=150)
+            if image:
+                plt.savefig("stablecompolbdsinusoid.pdf",bbox_inches='tight',dpi=150)
             break
 
 #jeudi 23 avril : simplifions en prenant lambda consant et mu =0, T=1
