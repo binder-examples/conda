@@ -144,7 +144,7 @@ def nsestimdenszchi(lzero,muzero,T,N,coeff=1.0,estimnoyau=False):
             plt.plot(tt,lamepa,color="green",label="stable composition density $\lambda(t) e^{A(t)}$ ")
             plt.plot(tt,tlam,color="red",label="$\lambda(t)$")
             plt.legend()
-            plt.savefig("stablecompolbdsinusoid.pdf",bbox_inches='tight',dpi=150)
+            #plt.savefig("stablecompolbdsinusoid.pdf",bbox_inches='tight',dpi=150)
             break
 
 #jeudi 23 avril : simplifions en prenant lambda consant et mu =0, T=1
