@@ -141,7 +141,7 @@ def nsestimdenszchi(lzero,muzero,T,N,coeff=1.0,estimnoyau=False):
             if estimnoyau:
                 plt.plot(tt,k(tt),label="echantillon")
             #plt.plot(tt,[(1+np.cos((2*pi*t)/T))/T for t in tt],color="red")
-            plt.plot(tt,lamepa,color="green",label="stable composition density $\lambda(t) e^{A(t)}$ ")
+            plt.plot(tt,lamepa,color="green",label="stable composition density $\pi$ ")
             plt.plot(tt,tlam,color="red",label="$\lambda(t)$")
             plt.legend()
             #plt.savefig("stablecompolbdsinusoid.pdf",bbox_inches='tight',dpi=150)
