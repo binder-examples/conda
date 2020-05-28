@@ -86,7 +86,7 @@ def sestimdenszchi(lzero,muzero,T,N):
             plt.plot(tt,k(tt),label="estim par noyau echantillon")
             #plt.plot(tt,[(1+np.cos((2*pi*t)/T))/T for t in tt],color="red")
             plt.plot(tt,lamepa,color="green",label="densite")
-            plt.plot(tt,tlam,color="red",label="$\lambda$")
+            plt.plot(tt,tlam,color="red",label=r"$\lambda$")
             plt.legend()
             break
 
@@ -141,10 +141,10 @@ def nsestimdenszchi(lzero,muzero,T,N,coeff=1.0,estimnoyau=False,image=False):
             if estimnoyau:
                 plt.plot(tt,k(tt),label="echantillon")
             #plt.plot(tt,[(1+np.cos((2*pi*t)/T))/T for t in tt],color="red")
-            #plt.plot(tt,lamepa,color="green",label="stable composition density $\lambda(t) e^{A(t)}$ ")
+            #plt.plot(tt,lamepa,color="green",label=r"stable composition density $\lambda(t) e^{A(t)}$ ")
             plt.plot(tt,lamepa,color="green",label="stable composition density")
-            #plt.plot(tt,tlam,color="red",label="$\lambda(t)$")
-            plt.plot(tt,tlam,color="red",label="birth rate")
+            plt.plot(tt,tlam,color="red",label=r"birth rate $\lambda(t)$")
+            #plt.plot(tt,tlam,color="red",label="birth rate")
             plt.legend()
             if image:
                 plt.savefig("stablecompolbdsinusoid.pdf",bbox_inches='tight',dpi=150)
@@ -175,7 +175,7 @@ def sisestimdenszchi(lzero,muzero,T,N):
             plt.plot(tt,k(tt),label="estim  noyau")
             #plt.plot(tt,[(1+np.cos((2*pi*t)/T))/T for t in tt],color="red")
             plt.plot(tt,lamepa,color="green",label="densite")
-            plt.plot(tt,tlam,color="red",label="$\lambda$")
+            plt.plot(tt,tlam,color="red",label=r"$\lambda$")
             
             plt.legend()
             break
