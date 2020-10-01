@@ -1,0 +1,79 @@
+# ----------------------------------------
+# Master Landing View
+# Campaigns
+# 20200901-20200930
+# ----------------------------------------
+
+Campaign,Event Action,Users,New Users,Sessions,Bounce Rate,Pages/Session,Avg. Session Duration,Make a month payment (Goal 1 Conversion Rate),Make a month payment (Goal 1 Completions),Make a month payment (Goal 1 Value)
+Player_Hobby_Sep16,Watch & Learn click,6,6,7,0.00%,7.00,00:02:03,0.00%,0,US$0.00
+29Aug-6Sep,Add Player' click,5,4,5,0.00%,2.60,00:00:46,0.00%,0,US$0.00
+29Aug-6Sep,Add Player Close click,4,3,4,0.00%,2.75,00:00:49,0.00%,0,US$0.00
+Insta Bio Free,Add Player' click,4,2,4,0.00%,6.50,00:08:57,0.00%,0,US$0.00
+Player_Hobby_Sep16,Read & Learn click,4,4,4,0.00%,6.50,00:01:36,0.00%,0,US$0.00
+Insta Bio Free,Read & Learn click,3,0,3,0.00%,10.33,00:02:03,0.00%,0,US$0.00
+Insta Bio Free,Watch & Learn click,3,1,3,0.00%,10.33,00:01:34,0.00%,0,US$0.00
+Player_Hobby_Sep16,Upper Download click,3,3,3,0.00%,2.00,00:00:19,0.00%,0,US$0.00
+29Aug-6Sep,Navigate' click,2,1,2,0.00%,3.50,00:01:03,0.00%,0,US$0.00
+Insta Bio Free,Add Extension' click,2,1,2,0.00%,10.00,00:16:40,0.00%,0,US$0.00
+Insta Bio Free,Add Tutor' click,2,1,2,0.00%,10.00,00:16:40,0.00%,0,US$0.00
+Insta Bio Free,Navigate' click,2,1,2,0.00%,12.00,00:03:03,0.00%,0,US$0.00
+Insta Bio Free,Play' click,2,1,2,0.00%,10.00,00:16:40,0.00%,0,US$0.00
+Insta Bio Free,Reviews right click,2,1,2,0.00%,12.00,00:03:03,0.00%,0,US$0.00
+Player_Hobby_Sep16,Free start click,2,2,2,0.00%,3.50,00:00:44,0.00%,0,US$0.00
+Player_Hobby_Sep16,Logo click,2,2,2,0.00%,12.00,00:04:09,0.00%,0,US$0.00
+29Aug-6Sep,About Us click,1,1,1,0.00%,2.00,00:00:19,0.00%,0,US$0.00
+29Aug-6Sep,Add Player Submit click,1,1,1,0.00%,2.00,00:00:36,0.00%,0,US$0.00
+29Aug-6Sep,Add Tutor' click,1,1,1,0.00%,2.00,00:00:40,0.00%,0,US$0.00
+29Aug-6Sep,Listen' click,1,1,1,0.00%,2.00,00:00:13,0.00%,0,US$0.00
+29Aug-6Sep,Logo click,1,0,1,0.00%,5.00,00:01:29,0.00%,0,US$0.00
+29Aug-6Sep,Play' click,1,1,1,0.00%,2.00,00:00:36,0.00%,0,US$0.00
+29Aug-6Sep,Read & Learn click,1,1,1,0.00%,6.00,00:00:22,0.00%,0,US$0.00
+29Aug-6Sep,Reviews right click,1,0,1,0.00%,5.00,00:01:29,0.00%,0,US$0.00
+29Aug-6Sep,Watch & Learn click,1,0,1,0.00%,5.00,00:01:29,0.00%,0,US$0.00
+aug5-aug12,Contact Us click,1,1,1,0.00%,2.00,00:00:52,0.00%,0,US$0.00
+Insta Bio Free,About Us click,1,1,1,0.00%,2.00,00:00:12,0.00%,0,US$0.00
+Insta Bio Free,Choose Free Plan click,1,0,1,0.00%,16.00,00:01:59,0.00%,0,US$0.00
+Insta Bio Free,Contact Us click,1,0,1,0.00%,16.00,00:01:59,0.00%,0,US$0.00
+Insta Bio Free,Language choose,1,0,1,0.00%,16.00,00:01:59,0.00%,0,US$0.00
+Insta Bio Free,Logo click,1,0,1,0.00%,16.00,00:01:59,0.00%,0,US$0.00
+Insta Bio Free,Reviews left click,1,0,1,0.00%,16.00,00:01:59,0.00%,0,US$0.00
+Insta Bio Free,Understand' click,1,1,1,0.00%,2.00,00:00:27,0.00%,0,US$0.00
+Player_Hobby_Sep16,About Us click,1,1,1,0.00%,12.00,00:07:16,0.00%,0,US$0.00
+Player_Hobby_Sep16,Add Player' click,1,1,1,0.00%,12.00,00:07:16,0.00%,0,US$0.00
+Player_Hobby_Sep16,Contact Us click,1,1,1,0.00%,12.00,00:07:16,0.00%,0,US$0.00
+Player_Hobby_Sep16,Language choose,1,1,1,0.00%,12.00,00:01:01,0.00%,0,US$0.00
+Player_Hobby_Sep16,Lower Download click,1,1,1,0.00%,2.00,00:00:34,0.00%,0,US$0.00
+,,70,47,71,0.00%,7.13,00:03:24,0.00%,0,US$0.00
+
+Day Index,Users
+01/09/2020,18
+02/09/2020,6
+03/09/2020,2
+04/09/2020,1
+05/09/2020,1
+06/09/2020,1
+07/09/2020,0
+08/09/2020,0
+09/09/2020,1
+10/09/2020,0
+11/09/2020,0
+12/09/2020,0
+13/09/2020,1
+14/09/2020,0
+15/09/2020,1
+16/09/2020,12
+17/09/2020,12
+18/09/2020,21
+19/09/2020,0
+20/09/2020,1
+21/09/2020,17
+22/09/2020,0
+23/09/2020,0
+24/09/2020,0
+25/09/2020,0
+26/09/2020,0
+27/09/2020,1
+28/09/2020,0
+29/09/2020,0
+30/09/2020,0
+,96
