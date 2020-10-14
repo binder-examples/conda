@@ -8,6 +8,7 @@ toolz
 matplotlib
 dill
 pandas
+ipywidgets
 partd
 bokeh
 dask
