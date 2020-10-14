@@ -1,0 +1,16 @@
+
+
+# modules python a intégrer dans l'image du moteur de notebook lors de sa fabrication matplotlib scipy
+
+numpy
+psutil
+toolz
+matplotlib
+dill
+pandas
+partd
+bokeh
+dask
+scipy
+seaborn
+appmode
