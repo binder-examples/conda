@@ -1,11 +1,15 @@
 
 
 # modules python a intégrer dans l'image du moteur de notebook lors de sa fabrication matplotlib scipy
-numpy
-matplotlib
-pandas
-ipywidgets
+numpy == 1.17.4
+ipython == 7.13.0
+ipykernel == 5.2.0
+matplotlib == 3.1.2
+pandas == 0.25.3
+ipywidgets==7.5.1
+jupyter-js-widgets-nbextension==0.0.2.dev0
+jupyter==1.0.0
 jupyter_contrib_nbextensions
-seaborn
-scipy
+seaborn == 0.10.0
+scipy == 1.3.3
 appmode
